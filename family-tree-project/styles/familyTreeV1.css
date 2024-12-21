@@ -1,0 +1,44 @@
+body {
+  background-color: black;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.main{
+  overflow: hidden;
+  min-height: 100vh;
+  justify-content: center;
+  background-color: #f1806c;
+  cursor:move;
+  user-select: none;
+  margin-left: 300px;
+}
+
+.main,
+.familyTree{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+}
+
+
+.familyTree{
+  background-color: #b83821!important;
+}
+
+.partner{
+  display:grid;
+  grid-auto-flow:column;
+  gap: 80px;
+  justify-items: center;
+}
+
+.children{
+  display: grid;
+  grid-auto-flow: column;
+  justify-items: center;
+  justify-content: space-around;
+  gap: 100px;
+}

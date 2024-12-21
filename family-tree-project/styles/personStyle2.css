@@ -1,0 +1,10 @@
+.person{
+  font-size: 10px;
+  width: 140px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #599fdd;
+  display: flex;
+  justify-content: center;
+  padding-top: auto;
+}

@@ -1,0 +1,52 @@
+.side-bar{
+  position: absolute;
+  width: 300px;
+  min-height: 100vh;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  z-index: 1;
+}
+.person-side-bar{
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+
+.start-load-buttons{
+  height: 100px;
+  width: 75%;
+  border-radius: 5%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.side-buttons{
+  justify-content: center;
+  align-items: center;
+}
+
+.personal-info{
+  background-color: bisque;
+  
+}
+
+
+.add-family-options{
+  margin-top: 20px;
+  background-color: blueviolet;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.person-img{
+  height: 175px;
+  background-color: black;
+}
