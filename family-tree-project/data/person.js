@@ -17,6 +17,23 @@ export function loadFromStorage() {
 }
 
 /**
+ * Checks the localStorage for faminfoarray and alerts the user that one exists if it exists.
+ * @returns Boolean true if the user wants to delete the array stored in localStorage.
+ */
+export function isFamTreeInStorage(){
+  familyInfo = JSON.parse(localStorage.getItem('famInfoArray'));
+  if(familyInfo){
+    let result = confirm("Family Tree exists in local storage, do you want to delete and create a new family tree?");
+    if(result){
+      familyInfo = [];
+      return result;
+    }else{
+      return result;
+    }
+  }
+}
+
+/**
  * Saves FamilyInfo array into localStorage
  */
 function saveToStorage() {

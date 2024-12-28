@@ -1,4 +1,4 @@
-import { loadFromStorage, addChild, addPartner, addSibling, addParents, updateBirthDate, updateName, updateGender, getGender, getBirthDate, getPartnerId, getName, hasChildren, getIndexofId, getPartnerName, hasPartner, familyInfo, addPerson, } from "../../data/person.js";
+import { isFamTreeInStorage, loadFromStorage, addChild, addPartner, addSibling, addParents, updateBirthDate, updateName, updateGender, getGender, getBirthDate, getPartnerId, getName, hasChildren, getIndexofId, getPartnerName, hasPartner, familyInfo, addPerson, } from "../../data/person.js";
 import { drawLine } from "./coordinates.js";
 
 /*
@@ -11,10 +11,12 @@ and if they want to overwrite it or use the saved one]
 */
 export function startTree(){
   document.querySelector('.js-create-fam-button').addEventListener('click', () =>{
-    addPerson();
-    generateTree(familyInfo[0].id);
-    generatesSidePreview(familyInfo[0].id);
-    mouseDragTest();
+    if(isFamTreeInStorage()){
+      addPerson();
+      generateTree(familyInfo[0].id);
+      generatesSidePreview(familyInfo[0].id);
+      mouseDragTest();
+    }
   });
   document.querySelector('.js-load-fam-button').addEventListener('click', () =>{
     loadFromStorage();
