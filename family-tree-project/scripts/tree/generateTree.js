@@ -268,16 +268,25 @@ function addChildToPerson(personId){
   addChild(personId);
 }
 
+
+
+
 /**
  * Generates the HTML for the side view of the person that was clicked on. The side view includes the info
  * and the buttons to add more family members
  * @param {Number} personId The person's ID
  */
 function generatesSidePreview(personId) {
+
+  function readURL(input){
+  
+
+    //document.getElementById('output').src = window.URL.createObjectURL(this.files[0])
+  }
   let html= `
     <div class="side-bar">
       <div class="person-side-bar">
-          <img class="person-img" src="./data/pictures/rick.png">
+          <img class="person-img" src="./data/pictures/question Mark.png">
           <div class="personal-info">
             <p>Name: <input class='js-side-bar-name' id='${personId}' placeholder='Enter Name' value='${getName(personId)}'></p>
             <p>Gender:
@@ -287,7 +296,6 @@ function generatesSidePreview(personId) {
             <input class='js-side-bar-birthdate' id='${personId}' type='date' value=${getBirthDate(personId)}>
             </p>
           </div>
-          <button class="button1">Edit Personal Info</button>
       </div>
       <div class="add-family-options">
         <button class='js-add-children-button'>Add Children</button>
@@ -369,6 +377,8 @@ function generatesSidePreview(personId) {
       updateName(Number(tempInput.id), tempInput.value);
       generateTree(Number(tempInput.id));
     });
+
+    
 
 }
 
